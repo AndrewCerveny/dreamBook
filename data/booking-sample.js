@@ -26,3 +26,5 @@ const bookingData = {
         }
     ]
 }
+
+module.exports = bookingData;

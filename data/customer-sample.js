@@ -1,4 +1,4 @@
-const customerDataSet = {
+const customerData = {
     "customers": [
         {
             "id": 1,
@@ -26,3 +26,5 @@ const customerDataSet = {
         }
     ]
 }
+
+module.exports = customerData;

@@ -1,4 +1,4 @@
-const roomData = {
+const roomsData = {
     "rooms": [
         {
             "number": 1,
@@ -34,3 +34,5 @@ const roomData = {
         }
     ]
 }
+
+module.exports = roomsData;
