@@ -1,5 +1,4 @@
-const guestData = {
-    "customers": [
+const guestData = [
         {
             "id": 1,
             "name": "Leatha Ullrich"
@@ -41,6 +40,6 @@ const guestData = {
             "name": "Tony Armstrong"
         }
     ]
-}
+
 
 export default guestData;

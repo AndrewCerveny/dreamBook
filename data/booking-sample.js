@@ -1,5 +1,4 @@
-const bookingData = {
-    "bookings": [
+const bookingData = [
         {
             "id": "5fwrgu4i7k55hl6sz",
             "userID": 9,
@@ -31,6 +30,6 @@ const bookingData = {
             "roomNumber": 11
         }
     ]
-}
+
 
 export default bookingData;
