@@ -23,8 +23,14 @@ const bookingData = {
             "userID": 20,
             "date": "2022/02/16",
             "roomNumber": 7
+        },
+        {
+            "id": "5fwrgu4i7k55hl6xk",
+            "userID": 9,
+            "date": "2022/01/31",
+            "roomNumber": 11
         }
     ]
 }
 
-module.exports = bookingData;
+export default bookingData;

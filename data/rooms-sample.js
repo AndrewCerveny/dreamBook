@@ -31,8 +31,24 @@ const roomsData = {
             "bedSize": "queen",
             "numBeds": 1,
             "costPerNight": 429.44
+        },
+        {
+            "number": 15,
+            "roomType": "residential suite",
+            "bidet": false,
+            "bedSize": "full",
+            "numBeds": 1,
+            "costPerNight": 294.56
+        },
+        {
+            "number": 11,
+            "roomType": "single room",
+            "bidet": true,
+            "bedSize": "twin",
+            "numBeds": 2,
+            "costPerNight": 207.24
         }
     ]
 }
 
-module.exports = roomsData;
+export default roomsData;

@@ -1,4 +1,4 @@
-const customerData = {
+const guestData = {
     "customers": [
         {
             "id": 1,
@@ -23,8 +23,24 @@ const customerData = {
         {
             "id": 6,
             "name": "Fleta Schuppe"
+        },
+        {
+            "id": 7,
+            "name": "Dell Rath"
+        },
+        {
+            "id": 8,
+            "name": "Era Hand"
+        },
+        {
+            "id": 9,
+            "name": "Faustino Quitzon"
+        },
+        {
+            "id": 10,
+            "name": "Tony Armstrong"
         }
     ]
 }
 
-module.exports = customerData;
+export default guestData;
