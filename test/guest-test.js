@@ -2,6 +2,7 @@ import { expect } from "chai";
 import guestData from '../data/guest-sample';
 import bookingData from '../data/booking-sample';
 import Guest from '../src/classes/Guest';
+import roomsData from "../data/rooms-sample";
 
 
 describe('Guest', function () {
@@ -11,7 +12,7 @@ describe('Guest', function () {
     guest2 = new Guest (guestData[1]);
     guest3 = new Guest (guestData[2]);
     guest5 = new Guest (guestData[8])
-    
+    console.log('myUser',guest5)
    });
     
    it('should be a function', function() {
@@ -61,6 +62,14 @@ describe('Guest', function () {
 		expect(guest3.pastBookings).to.deep.equal([])
 	 })
 
+     it('should be able to show all money spent on room',function(){
+       const guestBookedRooms = guest5.displayMyRooms(bookingData)
+      expect(guest5.totalSpent(guestBookedRooms,roomsData)).to.equal(501.8)
+        
+        
+     })
+
+     
         
     
         

@@ -4,10 +4,23 @@ class Guest {
 		this.name = guestData.name;
 		this.futureBookings = [];
 		this.pastBookings = [];
+		
 	} 
 	displayMyRooms(hotelBookings) {
 		const myRooms = hotelBookings.filter((hotelBooking) => hotelBooking.userID === this.id)
-			return myRooms
+		return myRooms
+	}
+	totalSpent(myRooms, roomsData) {
+		const myTotal = myRooms.reduce((num, myRoom) => {
+			roomsData.forEach((roomOff) => {
+				if(roomOff.number === myRoom.roomNumber) {
+					num += roomOff.costPerNight
+				}
+			})
+			return num
+		}, 0)
+		return myTotal.toFixed(2)
+
 	}
 };
 
