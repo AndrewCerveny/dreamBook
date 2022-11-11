@@ -1,28 +1,46 @@
 class Guest {
-	constructor(guestData) {
-		this.id = guestData.id || 0 ;
-		this.name = guestData.name;
-		this.futureBookings = [];
-		this.pastBookings = [];
-		
-	} 
+ constructor(customerData) {
+	this.id = customerData.id || 0;
+	this.name = customerData.name;
+	this.futureBookings = [];
+	this.pastBookings = [];
+	
+	
+ 	}
+ 	
 	displayMyRooms(hotelBookings) {
-		const myRooms = hotelBookings.filter((hotelBooking) => hotelBooking.userID === this.id)
-		return myRooms
+  		let myRooms = hotelBookings.filter((hotelBooking) => hotelBooking.userID === this.id)
+  		return myRooms
 	}
-	totalSpent(myRooms, roomsData) {
+ 
+ 	totalSpent(myRooms,roomsData ) {
 		const myTotal = myRooms.reduce((num, myRoom) => {
-			roomsData.forEach((roomOff) => {
-				if(roomOff.number === myRoom.roomNumber) {
-					num += roomOff.costPerNight
+			roomsData.forEach((roomOffered) => {
+				if(roomOffered.number === myRoom.roomNumber){
+					num += roomOffered.costPerNight
 				}
 			})
-			return num
-		}, 0)
-		return myTotal.toFixed(2)
-
+		
+		return num	
+		},0)
+		return myTotal
+		
 	}
-};
+
+	sortBookings(currentDate, myRooms) {
+		
+		myRooms.forEach((roomBooked) => {
+			
+			if(roomBooked.date < currentDate) {
+				this.pastBookings.push(roomBooked)
+ 			} else {
+				this.futureBookings.push(roomBooked)
+			}
+			console.log('did this work',this.pastBookings)
+			console.log('the other side', this.futureBookings)
+		})
+	}
+}
 
 
 
