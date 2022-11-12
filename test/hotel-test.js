@@ -151,17 +151,46 @@ describe('Hotel', function () {
 
             ])
     })
-     it('Should be able to hold a current guest',function() {
-        
+    
+    it('Should be able to hold a current guest',function() {
         expect(hotel1.currentGuest).to.deep.equal(
-            {
+        {
               
-                "id": 9,
-                "name": "Faustino Quitzon"
-            }   
-            ) 
-     })
-     it('Should be able to hold available rooms',function(){
-        expect(hotel1.availableRooms).to.deep.equal([])
-     }) 
-});
+            "id": 9,
+             "name": "Faustino Quitzon"
+        } 
+        ) 
+    })
+
+    it('It should take a date and check room available', function () {
+        expect(hotel1.displayFreeRooms("2022/04/22")).to.deep.equal
+        	( [
+              {
+                "id": "5fwrgu4i7k55hl6t5",
+                "userID": 43,
+                "date": "2022/01/24",
+                "roomNumber": 24
+              },
+              {
+                  "id": "5fwrgu4i7k55hl6t6",
+                  "userID": 13,
+                  "date": "2022/01/10",
+                "roomNumber": 12
+            	},
+            	{
+                "id": "5fwrgu4i7k55hl6t7",
+                "userID": 20,
+                "date": "2022/02/16",
+                "roomNumber": 7
+            	},
+            	{
+                "id": "5fwrgu4i7k55hl6xk",
+                "userID": 9,
+                "date": "2022/01/31",
+                "roomNumber": 11
+            	}
+        		]
+        	)
+		})
+		
+	});  
