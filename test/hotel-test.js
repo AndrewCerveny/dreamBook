@@ -205,4 +205,34 @@ describe('Hotel', function () {
 			]
 			)
 		 })
+		 
+		 it('Should filter rooms by their roomTypes', function() {
+			expect(hotel1.filterByRoomType('single room')).to.deep.equal(
+				[
+					{
+						number: 3,
+						roomType: 'single room',
+						bidet: false,
+						bedSize: 'king',
+						numBeds: 1,
+						costPerNight: 491.14
+					},
+					{
+						number: 4,
+						roomType: 'single room',
+						bidet: false,
+						bedSize: 'queen',
+						numBeds: 1,
+						costPerNight: 429.44
+					},
+					{
+						number: 11,
+						roomType: 'single room',
+						bidet: true,
+						bedSize: 'twin',
+						numBeds: 2,
+						costPerNight: 207.24
+					}
+				])
+		 })
 	});  
