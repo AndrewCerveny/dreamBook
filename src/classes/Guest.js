@@ -2,11 +2,7 @@ class Guest {
  constructor(customerData) {
 	this.id = customerData.id || 0;
 	this.name = customerData.name;
-	this.futureBookings = [];
-	this.pastBookings = [];
-	
-	
- 	}
+	}
  	
 	displayMyRooms(hotelBookings) {
   		let myRooms = hotelBookings.filter((hotelBooking) => hotelBooking.userID === this.id)
@@ -27,18 +23,21 @@ class Guest {
 		
 	}
 
-	sortBookings(currentDate, myRooms) {
+	showPast(currentDate, myRooms) {
+		let objCurDate = new Date(currentDate)
 		
-		myRooms.forEach((roomBooked) => {
+		const pastReserves = myRooms.filter((room) => new Date(room.date) < objCurDate)
+		return pastReserves
 			
-			if(roomBooked.date < currentDate) {
-				this.pastBookings.push(roomBooked)
- 			} else {
-				this.futureBookings.push(roomBooked)
-			}
-			console.log('did this work',this.pastBookings)
-			console.log('the other side', this.futureBookings)
-		})
+			
+		
+	}
+	showFuture(currentDate, myRooms) {
+		let objCurDate = new Date(currentDate)
+		
+		const futureReserves = myRooms.filter((room) => new Date(room.date) > objCurDate)
+		return futureReserves		
+
 	}
 }
 

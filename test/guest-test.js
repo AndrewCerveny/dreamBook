@@ -59,10 +59,10 @@ describe('Guest', function () {
   	expect(guest5.totalSpent(myRooms,roomsData)).to.equal(501.8)
   })
 
-  it.only('Should be able to sort past bookings by date', function () {
+  it('Should be able to sort past bookings by date', function () {
 		let myRooms = guest5.displayMyRooms(bookingsData)
 		let currentDate = "2022/02/22" 
-		expect(guest2.sortBookings(currentDate, myRooms)).to.deep.equal(
+		expect(guest2.showPast(currentDate, myRooms)).to.deep.equal(
 		[
 			{
 			id: '5fwrgu4i7k55hl6xk',
@@ -74,8 +74,10 @@ describe('Guest', function () {
 		
   })
         
-  it('Should be able to store future bookings', function () {
-    expect(guest5.sortBookings(currentDate,myRooms)).to.deep.equal(
+  it('Should be able to sort future bookings', function () {
+    let myRooms = guest5.displayMyRooms(bookingsData)
+    let currentDate = "2022/02/22" 
+    expect(guest5.showFuture(currentDate,myRooms)).to.deep.equal(
 			[
 				{
 				id: '5fwrgu4i7k55hl6sz',
