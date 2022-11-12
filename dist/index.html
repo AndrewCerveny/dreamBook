@@ -24,7 +24,7 @@
 </header>
 <body>
   <main>
-    <section class="guestBookingsPage"> 
+    <section class="guestBookingsPage "> 
       <div class="guest-page-wrapper">
         <aside>
           <section class="customer-side-area">
@@ -57,7 +57,7 @@
           </div>
           <div class="upComming-wrapper">
             <section class="future-Bookings">
-              <h2 class="upCom-title"> Past Reservation </h2>
+              <h2 class="upCom-title"> Past Reservations</h2>
               <section class="card-wrapper-container">
                 <section class="single-cards">
                   <div class="image-fit">
@@ -74,9 +74,36 @@
             </section>
            </div>
           <div>
-     </section>
-      
-        
+    </section>
+    <section class="book-a-room-page hidden">
+      <div class="bookpage-wrapper">   
+      <section class="page-divider">
+        <section class="selecting-a-date">
+          <form>
+            <label for="bookingRoom"> Book A room Here!</label>
+            <input type="date" id="bookingRoom">
+            <button type="submit"> Submit</button>
+          </form>
+        </section>
+        <section>
+          <section class="container-filter">
+            <label for="roomFilter">Filter Rooms by roomType :</label>
+            <select name="roomFilter" id="filter">
+              <option value="available">available</option>
+              <option value="suite">suite</option>
+              <option value="full" > full</option>
+              <option value="penthouse">Penthouse</option>
+            </select>
+          </section>
+        </section> 
+        <section class="display-area">
+          <div class="container-for-rooms">
+            <section class="cards-here">
+            </section>
+          </div>
+        </section>
+      </div>
+    </section>
          
         
    

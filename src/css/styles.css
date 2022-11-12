@@ -122,9 +122,25 @@ aside {
   width: 37vw;
   overflow-y: scroll;
   margin-top: 5rem;
-    
 }
-
+/* display page area  */
+.book-a-room-page {
+ border:1px solid black;
+ height:100vh;
+ background-color: #7D9D9C;
+}
+.bookpage-wrapper{
+ border:2px solid black;
+ height: 100vh;
+}
+.page-divider {
+  height: 30%;
+  border:1px solid black;
+  display: flex;
+  align-content: center;
+  justify-content: space-around;
+  align-items: center;
+}
 
 
 
