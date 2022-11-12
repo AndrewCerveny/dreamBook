@@ -18,6 +18,11 @@ class Hotel {
       const roomTypes = this.rooms.map((room) => room.roomType)
       return roomTypes
     }
+    filterByRoomType(roomTypeSelected) {
+       const sortedRooms = this.rooms.filter((room) => room.roomType === roomTypeSelected)
+       return sortedRooms
+    }
+
 }
 
 
