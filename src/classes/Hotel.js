@@ -14,6 +14,10 @@ class Hotel {
         
         return openRooms
     }
+    showAllRoomTypes() {
+      const roomTypes = this.rooms.map((room) => room.roomType)
+      return roomTypes
+    }
 }
 
 
