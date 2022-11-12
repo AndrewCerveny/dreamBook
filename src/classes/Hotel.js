@@ -4,9 +4,16 @@ class Hotel {
         this.guests = guestsData;
         this.bookings = bookingsData;
         this.currentGuest = currentGuest;
-        this.availableRooms = [];
+        
     }
-    
+    displayFreeRooms(chosenDate) {
+        let chosenDateObj = new Date(chosenDate)
+        let compareDate = chosenDateObj.getDate()
+ 
+        const openRooms = this.bookings.filter((booking) => new Date(booking.date).getDate() !== compareDate) 
+        
+        return openRooms
+    }
 }
 
 
