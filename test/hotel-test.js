@@ -192,5 +192,17 @@ describe('Hotel', function () {
         		]
         	)
 		})
-		
+		 it('Should be able to show all room types', function(){
+			expect(hotel1.showAllRoomTypes()).to.deep.equal(
+			[
+				'residential suite',
+				'suite',
+				'single room',
+				'single room',
+				'residential suite',
+				'single room'
+
+			]
+			)
+		 })
 	});  
