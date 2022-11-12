@@ -1,4 +1,4 @@
-const bookingData = [
+const bookingsData = [
         {
             "id": "5fwrgu4i7k55hl6sz",
             "userID": 9,
@@ -32,4 +32,4 @@ const bookingData = [
     ]
 
 
-export default bookingData;
+export default bookingsData;
