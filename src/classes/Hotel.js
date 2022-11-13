@@ -6,13 +6,26 @@ class Hotel {
         this.currentGuest = currentGuest;
         
     }
-    displayFreeRooms(chosenDate) {
+    displayFreeBookings(chosenDate) {
         let chosenDateObj = new Date(chosenDate)
         let compareDate = chosenDateObj.getDate()
  
-        const openRooms = this.bookings.filter((booking) => new Date(booking.date).getDate() !== compareDate) 
+        const openBookings = this.bookings.filter((booking) => new Date(booking.date).getDate() !== compareDate) 
         
-        return openRooms
+        return openBookings
+    }
+    showMeRooms(openBookings) {
+        const matchingRooms = openBookings.reduce((arr,booking)=> { 
+            this.rooms.forEach((room) => {
+            if(room.number === booking.roomNumber) {
+            arr.push(room)
+            }
+        })
+
+        return arr 
+        
+        },[])
+        return matchingRooms
     }
     showAllRoomTypes() {
       const roomTypes = this.rooms.map((room) => room.roomType)
