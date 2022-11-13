@@ -24,7 +24,7 @@
 </header>
 <body>
   <main>
-    <section class="guestBookingsPage"> 
+    <section class="guestBookingsPage hidden"> 
       <div class="guest-page-wrapper">
         <aside>
           <section class="customer-side-area">
@@ -57,7 +57,7 @@
           </div>
           <div class="upComming-wrapper">
             <section class="future-Bookings">
-              <h2 class="upCom-title"> Past Reservation </h2>
+              <h2 class="upCom-title"> Past Reservations</h2>
               <section class="card-wrapper-container">
                 <section class="single-cards">
                   <div class="image-fit">
@@ -74,9 +74,52 @@
             </section>
            </div>
           <div>
-     </section>
-      
+    </section>
+    <section class="book-a-room-page">
+      <div class="book-page-wrapper">   
+        <section class="user-selections">
+          <section class="date-selector">
+            <div class="date-form-wrapper"> 
+            <h2>Date</h2>
+              <form >
+                <label for="Date" class="hidden">Start date:</label>
+                  <input type="date" id="calendar" name="trip-start"  min="2022-01-01" max="2024-12-31">
+              </form>
+            </div>
+          </section>
+          <section class="filter-area">
+            <div class="filter-wrapper">
+                <form for="filtering-availible">
+                   <p style="color:white">Filter Your Room By!</p>
+                  <input type="checkbox" name="available" id="available" value="available" onclick="return       ValidateSelection();">
+                  <label for="filter-wrapper" style="color:white"> Available </label>
+                </form>
+                <section class="room-filter">
+                <form>
+                  <label for="room-type" style="color:white">Room Type</label>
+                  <select name="room-type" id="room-type">
+                    <option value="residential suite"> Residential Suite</option>
+                    <option value="suite"> Suite </option>
+                    <option value="single room"> Single Room </option>
+                    <option value="junior suite"> Junior Suite</option>
+                  </select>
+                  <input type="submit" value="Submit"/>
+                </form>
+              </section>
+            </div>
+          </section>
+
+        </section>
         
+        <section class="display-rooms">
+
+        </section>
+      
+      
+      
+      
+      </div>
+    </section>
          
         
    
