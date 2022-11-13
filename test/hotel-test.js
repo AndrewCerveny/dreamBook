@@ -162,8 +162,8 @@ describe('Hotel', function () {
         ) 
     })
 
-    it('It should take a date and check room available', function () {
-        expect(hotel1.displayFreeRooms("2022/04/22")).to.deep.equal
+    it('It should take a date and check bookings available', function () {
+        expect(hotel1.displayFreeBookings("2022/04/22")).to.deep.equal
         	( [
               {
                 "id": "5fwrgu4i7k55hl6t5",
@@ -192,7 +192,8 @@ describe('Hotel', function () {
         		]
         	)
 		})
-		 it('Should be able to show all room types', function(){
+		
+        it('Should be able to show all room types', function(){
 			expect(hotel1.showAllRoomTypes()).to.deep.equal(
 			[
 				'residential suite',
@@ -204,9 +205,31 @@ describe('Hotel', function () {
 
 			]
 			)
-		 })
+		})
 		 
-		 it('Should filter rooms by their roomTypes', function() {
+        it('Should take a list of available Bookings and return all Rooms available ', function(){
+            
+            const availableBookings = hotel1.displayFreeBookings("2022/04/22")
+            expect(hotel1.showMeRooms(availableBookings)).to.deep.equal(
+                
+                [
+                    {
+                        "number": 11,
+                        "roomType": "single room",
+                        "bidet": true,
+                        "bedSize": "twin",
+                        "numBeds": 2,
+                        "costPerNight": 207.24
+                    }  
+                ])
+
+        })
+
+
+
+
+
+		it('Should filter rooms by their roomTypes', function() {
 			expect(hotel1.filterByRoomType('single room')).to.deep.equal(
 				[
 					{
@@ -234,5 +257,5 @@ describe('Hotel', function () {
 						costPerNight: 207.24
 					}
 				])
-		 })
+		})
 	});  
