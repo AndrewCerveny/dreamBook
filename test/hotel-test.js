@@ -224,12 +224,8 @@ describe('Hotel', function () {
                 ])
 
         })
-
-
-
-
-
-		it('Should filter rooms by their roomTypes', function() {
+        
+        it('Should filter rooms by their roomTypes', function() {
 			expect(hotel1.filterByRoomType('single room')).to.deep.equal(
 				[
 					{
