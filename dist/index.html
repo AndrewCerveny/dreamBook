@@ -16,66 +16,48 @@
     </section>
     <section class="logout-area">
       <button class="customer-page navB"> Guest Page</button>
-      <button class="book-a-room navB">Book A Room</button>
-      <button type="button navB > My Bookings </button>
-      <button type="submit" class="navB"> Log Out </button>
+      <button class="book-rm-btn navB"> Book A Room</button>
+      <button type="submit" class="navB logOut"> Log Out </button>
     </section>
   </nav>
 </header>
 <body>
   <main>
-    <section class="guestBookingsPage hidden"> 
+    <section class="guestBookingsPage"> 
       <div class="guest-page-wrapper">
         <aside>
           <section class="customer-side-area">
             <section class="customer-image-area">
               <img class='travel-icon'src="./images/travel.jpg" alt="Icon Image for customer">
             </section>
-            <div class="spending-area">   
+            <div class="spending-area"> 
+              <h2> Hello! </h2>
+              <h3 class="current-user-name"> username </h3>  
               <h2> Total spent </h2>
-              <h3> 893.00 </h3>
+              <h3 class="totalSpent"> 893.00 </h3>
             </div> 
           </section>
         </aside>
           <div class="upComming-wrapper">         
             <section class="future-Bookings">
-              <h2 class="upCom-title"> UpComing Reservations </h2>
+              <h2 class="upCom-title"> Upcoming Reservations </h2>
                 <section class="card-wrapper-container">
-                  <section class="single-cards">
-                    <div class="image-fit">
-                      <img src="./images/Bed.jpg" alt="roomType" class="bed-pic">
-                    </div>
-                    <h3> Booking Id </h3>
-                      <p> 5fwrgu4i7k55hl6sz </p>
-                    <h3 > Date </h3>
-                      <p> 2022/04/22 </p> 
-                    <h3> Cost </h3>
-                      <p> 294.56 </p>
-                  </section>
+                  <!-- append from here -->
+                
+                  <!-- and up -->
                 </section>
             </section>
           </div>
           <div class="upComming-wrapper">
             <section class="future-Bookings">
               <h2 class="upCom-title"> Past Reservations</h2>
-              <section class="card-wrapper-container">
-                <section class="single-cards">
-                  <div class="image-fit">
-                    <img src="./images/pastBed.jpg" alt="roomType" class="bed-pic">
-                  </div>
-                  <h3> Booking Id </h3>
-                  <p> 5fwrgu4i7k55hl6sz </p>
-                  <h3> Date </h3>
-                  <p> 2022/04/22 </p>
-                  <h3> Cost </h3>
-                  <p> 294.56 </p>
-                </section>
-              </section>
-            </section>
-           </div>
+              <section class="card-wrapper-container pr-container">
+                <!-- apend info from here -->
+               
+                <!-- apend info from above -->
           <div>
     </section>
-    <section class="book-a-room-page hidden">
+    <section class="book-a-room-page hidden ">
       <div class="book-page-wrapper">   
         <section class="user-selections">
           <section class="date-selector">
@@ -83,7 +65,7 @@
             <h2>Date</h2>
               <form >
                 <label for="Date" class="hidden">Start date:</label>
-                  <input type="date" id="calendar" name="trip-start"  min="2022-01-01" max="2024-12-31">
+                  <input class="calendar-area" type="date" id="calendar" name="trip-start"  min="2022-01-01" max="2024-12-31">
               </form>
             </div>
           </section>
@@ -91,7 +73,7 @@
             <div class="filter-wrapper">
                 <form for="filtering-availible">
                    <p style="color:white">Filter Your Room By!</p>
-                  <input type="checkbox" name="available" id="available" value="available" onclick="return       ValidateSelection();">
+                  <input class="available-rooms" type="checkbox" name="available" id="available" value="available" >
                   <label for="filter-wrapper" style="color:white"> Available </label>
                 </form>
                 <section class="room-filter">
@@ -103,7 +85,7 @@
                     <option value="single room"> Single Room </option>
                     <option value="junior suite"> Junior Suite</option>
                   </select>
-                  <input type="submit" value="Submit"/>
+                  <input class= 'submit-room-types'type="submit" value="Submit"/>
                 </form>
               </section>
             </div>

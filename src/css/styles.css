@@ -91,6 +91,8 @@ aside {
   flex-direction: column;
   align-items: center;
   width: 86%;
+  flex-wrap: wrap;
+  overflow-y: scroll;
 }
 .bed-pic {
   margin-top: 1rem;
@@ -120,8 +122,13 @@ aside {
   border: 1px solid black;
   height: 60vh;
   width: 37vw;
-  overflow-y: scroll;
   margin-top: 5rem;
+}
+
+.pr-container {
+display: flex;
+overflow-y: scroll;
+
 }
 /* display page area  */
 .book-a-room-page {
@@ -186,7 +193,9 @@ background-color:#7D9D9C;
  margin-top: 4rem;
  height: 3rem;
 }
-
+.card-borders{
+border: 2px solid white;
+}
 .hidden {
   display: none;
 }
