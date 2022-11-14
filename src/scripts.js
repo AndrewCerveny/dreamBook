@@ -93,6 +93,7 @@ function updateGuestPage(currentGuest,dreamBookHotel){
 	userNameDisplay.innerHTML = currentGuest.name
 	showCurrentUsersPastBookings(myRooms,currentGuest)
 	showCurrentUsersFutureBookings(myRooms,currentGuest)
+	showUserSpending(currentGuest,myRooms,dreamBookHotel.rooms)
 }
 
 
@@ -171,3 +172,7 @@ function showCurrentUsersFutureBookings(myRooms,currentGuest) {
     </section>`
 	})
 }
+ function showUserSpending(guest,customerRooms,allRooms) {
+	const showTheMoney = guest.totalSpent(customerRooms,allRooms)
+	totalSpent.innerHTML= `$ ${showTheMoney.toFixed(2)}`
+ }
